@@ -1,0 +1,46 @@
+<div class="row mx-auto" style="max-width: 600px;">
+  <div class="text-center mt-5">
+    <img src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png"
+      alt="link pic" class="rounded" width="250">
+  </div>
+  {{#unless data}}
+  <div class="inputContainer mx-auto mt-3" style="max-width: 600px;">
+    <form action="/" method="POST">
+      <label for="basic-url" class="form-label">Your URL:</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">目標網址：</span>
+        <input type="url" class="form-control" placeholder="your URL" name="inputURL" id="basic-url"
+          value="{{inputURL}}">
+        <button class="btn btn-outline-secondary" type="submit">submit</button>
+      </div>
+    </form>
+  </div>
+  {{/unless}}
+  {{!-- 送出目標網址後出現以下 --}}
+  {{#if data}}
+  {{#if warring}}
+  <div class="mx-auto">
+    <h2>輸入的 url 無效，請在試試！</h2>
+  </div>
+  {{/if}}
+  {{#if success}}
+  <div class="mx-auto">
+    <h2>成功縮網址！</h2>
+  </div>
+  {{/if}}
+
+  <div class="input-group mx-auto mt-3" style="max-width: 600px;">
+
+    <span class="input-group-text">已縮網誌：</span>
+    <input type="text" class="form-control" id="shortURL" value="{{data}}" readonly>
+    <button type="button" class="btn btn-outline-secondary mx-auto"
+      onClick="shortURL.select();document.execCommand('Copy')">複製</button>
+  </div>
+
+
+  <a href="/">
+    <button type="button" class="btn btn-outline-primary mt-1">back</button>
+  </a>
+  {{/if}}
+
+</div>
