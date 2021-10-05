@@ -15,7 +15,7 @@ a backend demo with Express.js, Node.js and MongoDB.
 ## Installation
 1. copy and paste URL to your local terminal 
   ```
-  git clone https://github.com/rayray1010/restaurant.git
+  git clone https://github.com/rayray1010/URL_shortener.git
   ```
 2. install the dependencies 
   ```
