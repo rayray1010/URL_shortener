@@ -1,6 +1,6 @@
 const db = require('../../config/mongoose')
 const URL = require('../URL')
-const generateRandomChar = require('../../randomURL')
+const generateRandomChar = require('../../randomChar')
 
 db.once('open', () => {
   URL.create([
